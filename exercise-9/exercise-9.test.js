@@ -4,7 +4,7 @@ const pool = require("../lib/utils/pool");
 describe("exercise 9", () => {
   afterAll(() => pool.end());
 
-  it.skip("find ROLLUP of amount made per year, month, day", async () => {
+  it("find ROLLUP of amount made per year, month, day", async () => {
     const { rows } = await pool.query(
       fs.readFileSync(`${__dirname}/exercise-9.sql`, "utf-8")
     );
